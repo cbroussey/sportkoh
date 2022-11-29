@@ -4,10 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>coucou</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
-  <p>ol<p>
+  <p><strong>ol</strong></p>
 </body>
 </html>
