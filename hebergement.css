@@ -1,0 +1,35 @@
+body{
+    color: black;
+    background-color:#d3f78f;
+    width: 80em;
+    height: 150em;
+    border: 1px;
+    padding: 1em;
+    display: block;
+    position: absolute;
+    left: 16em;
+}
+html{
+    background-color: white;
+}
+
+header{
+    display: flex;
+    background-color: #9bc635;
+}
+header>section{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.1px;
+    align-self: center;
+    /*background-color: red;*/
+}
+img{
+    padding: 0.5em;
+}
+header>img{
+    background-color: #9bc635;
+}
+header>h2{
+    align-self: center;
+}
