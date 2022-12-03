@@ -11,10 +11,10 @@
 - Une fois que c'est fait, le repo devrait se cloner et une fenêtre vous demandans si vous voulez l'ouvrir devrait s'afficher (sinon réessayez, et si vous y arrivez toujours pas mp moi)
 
 
-## Pour soummettre des changements
+## Pour soumettre des changements
 
 - CTRL + Maj + G (L'onglet contrôle de code source dans la barre latérale de gauche)
-- Pour la première fois ou si on a merge votre branche : Appuyez sur les trois petits points en haut de la barre latérale, et allez dans "Branche" -> "Créer une branche" et nommez la avec votre nom prénom ou jsp moi
+- Pour la première fois ou si on a merge votre branche : Appuyez sur les trois petits points en haut de la barre latérale, et allez dans "Branche" -> "Créer une branche" et nommez la avec votre nom prénom ou jsp moi 
 ![image.png](./image.png)
 - Comparez vos changements si vous le souhaitez (double clic sur les noms des fichiers qui apparaissent dans la barre à gauche de votre écran)
 - Appuyez sur le + pour chaque fichier que vous souhaitez soummettre (vous êtes pas obligé de tout mettre, par exemple si il y a un fichier où tout est pas fini mais que il y en a d'autres où on en a besoin)
@@ -23,5 +23,13 @@
 - Sauvegardez (CTRL + S) et fermez ce fichier, les changements devrait alors être push
 
 
-IMPORTANT :
-au lieu de commit+push, créez une nouvelle branche où vous ferez vos modifications
+## Si on a merge votre branche avec la principale
+- Dans VScode, CTRL + Maj + G (bon vous savez hein)
+- Les 3 petits points -> "Checkout to" (ou jsp ce qu'il y a marqué en fr, en dessous de clone en gros)
+- Cliquez sur "master" dans le truc qui s'affiche (pas le origin/master, juste le master)
+- Le code devrait revenir à un truc ancien, c normal
+- Recliquez sur les 3 petits points -> "Delete Branch"
+- Sélectionnez le nom de votre branche que vous avez créez
+- Une fois que c fait, recliquez encore une fois sur les 3 petits points et cliquez sur "Pull"
+- Voilà normalement c bon, vous avez les derniers changements mis en commun (avec les votres aussi normalement)
+- **IMPORTANT** : n'oubliez pas de recréer une nouvelle branche où vous ferez vos modifications (quand vous allez commit)
