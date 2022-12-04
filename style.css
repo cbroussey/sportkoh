@@ -1,0 +1,34 @@
+html {
+    background-color: white;
+}
+
+body {
+    color: black;
+    background-color:#d3f78f;
+    padding: 1em;
+}
+
+header {
+    display: flex;
+    background-color: #9bc635;
+}
+
+header > section{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.1px;
+    align-self: center;
+    /*background-color: red;*/
+}
+
+img {
+    padding: 0.5em;
+}
+
+header > img {
+    background-color: #9bc635;
+}
+
+header > h2 {
+    align-self: center;
+}
