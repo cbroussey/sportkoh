@@ -1,20 +1,19 @@
 body{
     color: black;
     background-color:#d3f78f;
-    border: 1px;
-    padding: 1em;
-    display: block;
-    position: absolute;
-    left: 16em;
+    /*border: 1px;*/
+    /*padding: 1em;*/
 }
+
 html{
     background-color: white;
 }
 
-header{
+header,footer{
     display: flex;
     background-color: #9bc635;
 }
+
 header>section{
     display: flex;
     flex-direction: column;
@@ -22,12 +21,189 @@ header>section{
     align-self: center;
     /*background-color: red;*/
 }
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+header > div > * ,footer > div > *{
+    margin: auto 4% auto;
+}
+
 img{
     padding: 0.5em;
 }
+
 header>img{
     background-color: #9bc635;
 }
+
 header>h2{
     align-self: center;
 }
+
+main>section>article>div{
+    display: flex;
+    /*float: left;*/
+    /*background-color: red;*/
+}
+
+/* le titre h2 */
+
+main>section>article>h2{
+    /*display: flex;*/
+    background-color: #00373e;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+main>section>article>h1{
+    /*display: flex;*/
+    background-color: #00373e;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 0em;
+
+}
+
+main>section>article+article>h2+div{
+    display:flex;
+    justify-content: center;
+}
+
+main>section>article+article+article>h2+div{
+    /*background-color: red;*/
+    display:inline-flex;
+    justify-content: center;
+}
+/* mettre le text au dessus des figures 1 et2 */
+main>section>article+article+article>h2+div>div{
+    /*background-color: purple;*/
+    display:flex;
+    flex-direction: column;
+}
+/* idem 3 et 4 */
+main>section>article+article+article>h2+div+div>div{
+    /*background-color: red;*/
+    display:flex;
+    flex-direction: column;
+}
+
+main>section>article+article+article>h2+div>div>p{
+    background-color: yellow;
+    display:flex;
+    align-self: center;
+    margin-bottom: 0em;
+}
+
+main>section>article+article+article>h2+div+div>div>p{
+    background-color: yellow;
+    display:flex;
+    align-self: center;
+    margin-bottom: 0em;
+}
+
+/* centrer le premier div */
+main>section>article+article+article>h2+div{
+    display:flex;
+    justify-content: center;
+}
+/* centrer le deuxième div */
+main>section>article+article+article>h2+div+div{
+    display:flex;
+    justify-content: center;
+}
+/* gestion du premier OU */
+main>section>article+article+article>h2+div>div+p{
+    display:flex;
+    align-self: center;
+}
+
+/* gestion du deuxième OU */
+main>section>article+article+article>h2+div+div>div+p{
+    display:flex;
+    align-self: center;
+}
+/* enlever la marge externe de l'img 1 et la redimensionner pour qu'elle est la largeur du texte */
+main>section>article+article+article>h2+div>div>p+figure>img{
+    width: 179.117px;
+    padding-top: 0em;
+}
+
+/* enlever la marge externe de l'img 3 et 4 et les redimensionner pour qu'elle est la largeur du texte */
+main>section>article+article+article>h2+div+div>div>p+figure>img{
+    width: 179.117px;
+    height: 130px;
+    padding-top: 0em;
+}
+
+/* enlever la marge externe de l'img 2 et la redimensionner pour qu'elle est la largeur du texte */
+main>section>article+article+article>h2+div>div+p+div>p+figure>img{
+    width: 195.983px;
+    padding-top: 0em;
+}
+/* enlever la marge externe de la figure des 2 premières images article 3 */
+main>section>article+article+article>h2+div>div>p+figure{
+    margin-top: 0em;
+}
+
+/* enlever la marge externe de la figure des 2 dernières images article 3 */
+main>section>article+article+article>h2+div+div>div>p+figure{
+    margin-top: 0em;
+}
+
+/* centrer les légendes */
+figcaption{
+    text-align: center;
+}
+
+/* arranger la largeur du conteneur du text self-service */
+main>section>article+article+article>h2+div+div>div>p{
+    padding-left: 3.21em ;
+    padding-right: 3.21em ;
+}
+
+/* arranger la largeur du conteneur du text panier repas */
+main>section>article+article+article>h2+div+div>div+p+div>p{
+    padding-left: 2.045em ;
+    padding-right: 2.04em ;
+}
+/* remettre en place l'img décalé par le padding du texte */
+main>section>article+article+article>h2+div+div>div+p{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main>section>article+article+article+article>p{
+    text-align: center;
+}
+
+main>section>article+article+article+article>h2+p+div{
+    display: flex;
+    justify-content: center;
+}
+
+main>section>aside{
+    display: flex;
+    /*background-color: aquamarine;*/
+    justify-content: center;
+}
+
+footer>img+div{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    justify-content: center;
+}
+
+
+
+
