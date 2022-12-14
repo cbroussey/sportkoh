@@ -1,14 +1,21 @@
 body{
     color: black;
-    background-color:#d3f78f;
+    background-color: white;
     /*border: 1px;*/
     /*padding: 1em;*/
 }
 
-html{
-    background-color: white;
+img,figure>img{
+    border-radius:20px;
+}
+main,footer,header{
+    margin-right: 15em;
+    margin-left: 15em;
 }
 
+main{
+    background-color: #D3F78F;
+}
 header,footer{
     display: flex;
     background-color: #9bc635;
@@ -30,7 +37,7 @@ header > div {
 }
 
 header > div > * ,footer > div > *{
-    margin: auto 4% auto;
+    margin: auto 1% auto;
 }
 
 img{
@@ -61,6 +68,19 @@ main>section>article>h2{
     padding-top: 40px;
     padding-bottom: 40px;
 
+}
+
+main>section>article>div>img+p{
+    font-size: 25px;
+    height: 20px;
+    /*float: left;*/
+    /*background-color: red;*/
+}
+
+main>section>article>div>img{
+    flex-basis: 20%;
+    /*float: left;*/
+    /*background-color: red;*/
 }
 
 main>section>article>h1{
@@ -98,14 +118,16 @@ main>section>article+article+article>h2+div+div>div{
 }
 
 main>section>article+article+article>h2+div>div>p{
-    background-color: yellow;
+    background-color: #00373e;
+    color: white;
     display:flex;
     align-self: center;
     margin-bottom: 0em;
 }
 
 main>section>article+article+article>h2+div+div>div>p{
-    background-color: yellow;
+    background-color: #00373e;
+    color: white;
     display:flex;
     align-self: center;
     margin-bottom: 0em;
@@ -134,22 +156,21 @@ main>section>article+article+article>h2+div+div>div+p{
 }
 /* enlever la marge externe de l'img 1 et la redimensionner pour qu'elle est la largeur du texte */
 main>section>article+article+article>h2+div>div>p+figure>img{
-    width: 179.117px;
+    width: 210px;
     padding-top: 0em;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 /* enlever la marge externe de l'img 3 et 4 et les redimensionner pour qu'elle est la largeur du texte */
 main>section>article+article+article>h2+div+div>div>p+figure>img{
-    width: 179.117px;
-    height: 130px;
+    width: 210px;
+    height: 250px;
     padding-top: 0em;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
-/* enlever la marge externe de l'img 2 et la redimensionner pour qu'elle est la largeur du texte */
-main>section>article+article+article>h2+div>div+p+div>p+figure>img{
-    width: 195.983px;
-    padding-top: 0em;
-}
 /* enlever la marge externe de la figure des 2 premières images article 3 */
 main>section>article+article+article>h2+div>div>p+figure{
     margin-top: 0em;
@@ -167,15 +188,28 @@ figcaption{
 
 /* arranger la largeur du conteneur du text self-service */
 main>section>article+article+article>h2+div+div>div>p{
-    padding-left: 3.21em ;
-    padding-right: 3.21em ;
+    padding-left: 4.2em ;
+    padding-right: 4.15em ;
 }
 
 /* arranger la largeur du conteneur du text panier repas */
 main>section>article+article+article>h2+div+div>div+p+div>p{
-    padding-left: 2.045em ;
-    padding-right: 2.04em ;
+    padding-left: 3.02em ;
+    padding-right: 3em ;
 }
+
+/* arranger la largeur du conteneur du text couple*/
+main>section>article+article+article>h2+div>div+p+div>p{
+    padding-left: 0.45em ;
+    padding-right: 0.45em ;
+}
+
+/* arranger la largeur du conteneur du text bungaluws */
+main>section>article+article+article>h2+div>div>p{
+    padding-left: 1em ;
+    padding-right: 1em ;
+}
+
 /* remettre en place l'img décalé par le padding du texte */
 main>section>article+article+article>h2+div+div>div+p{
     padding-left: 1em;
@@ -189,6 +223,15 @@ main>section>article+article+article+article>p{
 main>section>article+article+article+article>h2+p+div{
     display: flex;
     justify-content: center;
+}
+
+main>section>article+article+article+article>h2+p+div+p+div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #00373e;
+    color: white;
+    /*justify-content: center;*/
 }
 
 main>section>aside{
