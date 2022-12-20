@@ -220,6 +220,7 @@ main>section>article+article+article>h2+div+div>div>p+figure{
 
 /* centrer les légendes */
 figcaption{
+    display: block;
     text-align: center;
 }
 
@@ -313,8 +314,9 @@ footer>img+div{
         height:200%;
     }
     main>section>article+article>h2+div>figure{
-        margin-bottom: 4em;
         display: flex;
+    }
+    main>section>article+article>h2+div{
         flex-wrap: wrap;
     }
     /*main>section>article>div>img{
