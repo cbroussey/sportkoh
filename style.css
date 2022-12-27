@@ -1,87 +1,87 @@
 @font-face {
     font-family: 'patua_one';
-    src: url('patuaone-regular-webfont.woff2') format('woff2'),
-         url('patuaone-regular-webfont.woff') format('woff');
+    src: url('polices/patuaone-regular-webfont.woff2') format('woff2'),
+         url('polices/patuaone-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-regular-webfont.woff2') format('woff2'),
-         url('poppins-regular-webfont.woff') format('woff');
+    src: url('polices/poppins-regular-webfont.woff2') format('woff2'),
+         url('polices/poppins-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-italic-webfont.woff2') format('woff2'),
-         url('poppins-italic-webfont.woff') format('woff');
+    src: url('polices/poppins-italic-webfont.woff2') format('woff2'),
+         url('polices/poppins-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-bold-webfont.woff2') format('woff2'),
-         url('poppins-bold-webfont.woff') format('woff');
+    src: url('polices/poppins-bold-webfont.woff2') format('woff2'),
+         url('polices/poppins-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-bolditalic-webfont.woff2') format('woff2'),
-         url('poppins-bolditalic-webfont.woff') format('woff');
+    src: url('polices/poppins-bolditalic-webfont.woff2') format('woff2'),
+         url('polices/poppins-bolditalic-webfont.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-extrabold-webfont.woff2') format('woff2'),
-         url('poppins-extrabold-webfont.woff') format('woff');
+    src: url('polices/poppins-extrabold-webfont.woff2') format('woff2'),
+         url('polices/poppins-extrabold-webfont.woff') format('woff');
     font-weight: bolder;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-extrabolditalic-webfont.woff2') format('woff2'),
-         url('poppins-extrabolditalic-webfont.woff') format('woff');
+    src: url('polices/poppins-extrabolditalic-webfont.woff2') format('woff2'),
+         url('polices/poppins-extrabolditalic-webfont.woff') format('woff');
     font-weight: bolder;
     font-style: italic;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-light-webfont.woff2') format('woff2'),
-         url('poppins-light-webfont.woff') format('woff');
+    src: url('polices/poppins-light-webfont.woff2') format('woff2'),
+         url('polices/poppins-light-webfont.woff') format('woff');
     font-weight: light;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-lightitalic-webfont.woff2') format('woff2'),
-         url('poppins-lightitalic-webfont.woff') format('woff');
+    src: url('polices/poppins-lightitalic-webfont.woff2') format('woff2'),
+         url('polices/poppins-lightitalic-webfont.woff') format('woff');
     font-weight: light;
     font-style: italic;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-extralight-webfont.woff2') format('woff2'),
-         url('poppins-extralight-webfont.woff') format('woff');
+    src: url('polices/poppins-extralight-webfont.woff2') format('woff2'),
+         url('polices/poppins-extralight-webfont.woff') format('woff');
     font-weight: lighter;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'poppins';
-    src: url('poppins-extralightitalic-webfont.woff2') format('woff2'),
-         url('poppins-extralightitalic-webfont.woff') format('woff');
+    src: url('polices/poppins-extralightitalic-webfont.woff2') format('woff2'),
+         url('polices/poppins-extralightitalic-webfont.woff') format('woff');
     font-weight: lighter;
     font-style: italic;
 
@@ -90,15 +90,57 @@
 
 html {
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 body {
-    color: black;
+    color: #00373E;
     background-color:#d3f78f;
 }
 
 h1 {
-    font-family: 'patua_one', Arial, sans-serif;
+    font: normal normal 100 30px/normal 'patua_one', Arial, sans-serif;
+}
+
+h2 {
+    font: normal normal 100 20px/normal 'patua_one', Arial, sans-serif;
+}
+
+h3 {
+    font: normal normal 100 18px/normal 'patua_one', Arial, sans-serif;
+}
+
+p {
+    font: normal normal normal 15px/normal 'poppins', Arial, sans-serif;
+}
+
+a {
+    color: #00373E;
+    text-decoration: none;
+    transition: color 0.2s ease 0ms;
+}
+
+aside > p, main + div > p {
+    margin: 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-align: justify;
+    border-radius: 0 0 1em 1em;
+}
+
+div + aside {
+    border-radius: 1em;
+    margin: 0.5em auto;
+}
+
+a:hover {
+    color: #1278D6;
+    text-decoration: none;
+}
+
+aside + main > section > article > h1 {
+    margin: 0;
+    margin-top: 1em;
 }
 
 header, footer {
@@ -106,11 +148,14 @@ header, footer {
     background-color: #9bc635;
     justify-content: space-around;
     align-items: center;
+    padding-right: 5%;
+    padding-left: 5%;
+    min-height: 60px;
 }
 
 header {
     border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;  
+    border-bottom-right-radius: 1em;
 }
 
 header > div {
@@ -125,18 +170,24 @@ header > div {
 #hamburger {
     display: none;
     min-width: 0;
-    margin-left: 1em;
 }
 
 #sportkho {
-    margin-left: 0.5em;
     justify-content: center;
+}
+
+#sportkho > img {
+    margin-right: 0.5em;
 }
 
 #menu {
     max-width: 100%;
     flex-grow: 1;
     order: 1;
+}
+
+div > section > * {
+    margin: 0;
 }
 
 div > ul {
@@ -147,7 +198,8 @@ div > ul {
 }
 
 ul > li {
-    flex: none;
+    display: flex;
+    max-width: 100%;
 }
 
 li > figure {
@@ -162,7 +214,7 @@ li > figure > img {
     height: 2em;
 }
 
-li > figure > figcaption > h2 {
+figcaption > a > h2 {
     margin: 0;
 }
 
@@ -172,48 +224,34 @@ li > *, footer > div > * {
 
 #panier {
     min-width: 0;
-    margin-right: 1em;
     order: 2;
-}
-
-@media screen and (max-width: 800px) {
-    #hamburger { display: flex; }
-    #menu { display: none; }
-    #sportkho {
-        margin: 0;
-        max-width: 100%;
-        flex-grow: 1;
-    }
-    figcaption > h2 {
-        font-size: 1em;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    li > figure > img {
-        display: none;
-    }
-}
-
-img {
-    margin: 0.5em;
 }
 
 header > h2 {
     align-self: center;
 }
 
+aside, main {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 main > section > article > div {
     display: flex;
 }
+
+body > div {
+    margin-top: 2em;
+}
+
 
 footer {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
 
-footer > img {
-    margin-left: 1em;
+footer > a {
+    margin-right: 0.5em;
 }
 
 footer > div {
@@ -227,8 +265,136 @@ footer > div > ul > li > figure {
     flex-direction: row;
     max-width: 20em;
     align-items: center;
+    margin-right: 0.5em;
+}
+
+footer > div > ul > li > figure > img {
+    margin-right: 0.5em;
 }
 
 ul {
     padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+    #hamburger { display: flex; }
+    #menu { display: none; }
+    #sportkho {
+        margin: 0;
+        max-width: 100%;
+        flex-grow: 1;
+    }
+    figcaption > a > h2 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    li > figure > img {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
+    header {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header > * > img {
+        width: 40px;
+        height: 40px;
+    }
+    div > section > h1 {
+        font-size: 1em;
+    }
+    div > section > h3 {
+        font-size: 0.6em;
+    }
+    #sportkho {
+        min-width: 8em;
+    }
+}
+
+.gris {
+    background-color: #D9D9D9;
+    color: #00373E;
+}
+
+.emeraude {
+    background-color: #77DD77;
+    color: #00373E;
+}
+
+.noir {
+    background-color: #00373E;
+    color: #FFFFFF;
+}
+
+.vert {
+    background-color: #9BC635;
+    color: #00373E;
+}
+
+.scrollpane {
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    scroll-behavior: smooth;
+
+    /* Active la force d'adhérence sur l'axe des X */
+    scroll-snap-type: x mandatory;
+
+    /* Affiche la barre de défilement */
+    overflow-x: scroll;-ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
+    scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
+}
+
+.scrollpane::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar on Webkit based browsers (Chrome, Safari, etc) */
+    -webkit-overflow-scrolling: touch; /* On touch screens the content continues to scroll for a while after finishing the scroll gesture */
+}
+
+.scrollpane > * {
+    flex: 0 0 auto;
+    width: 50px;
+}
+
+.card {
+    background-color: #eee;
+    width: 200px;
+    height: 300px;
+
+    /* Espacement entre les */
+    margin-right: 2em;
+
+    /* Conserve la taille des cartes (items) */
+    flex: 0 0 auto;
+
+    /* Aligne le défilement au centre */
+    scroll-snap-align: center;
+    scroll-padding-left: 5%;
+
+    border-radius: 1em;
+}
+
+.client {
+    background-color: #eee;
+    width: 300px;
+    height: 200px;
+
+    /* Espacement entre les */
+    margin-right: 2em;
+
+    /* Conserve la taille des cartes (items) */
+    flex: 0 0 auto;
+
+    /* Aligne le défilement au centre */
+    scroll-padding-left: 5%;
+
+    border-radius: 1em;
 }
