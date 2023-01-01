@@ -37,19 +37,18 @@ function scrollLR(objectId, direction) {
 
 async function infiniteScroll(objectId, speed, wait) {
     setTimeout(() => {
-        if (document.querySelector(objectId).scrollLeft > (document.querySelector(objectId).children[0].offsetWidth + 32)) {
+        if (document.querySelector(objectId).scrollLeft > ((document.querySelector(objectId).children[0].offsetWidth + 16) * 2)) {
             existant = Array.from(document.querySelector(objectId).querySelectorAll(".client")).slice(1)
-            ajout = Array.from(document.querySelector(objectId).querySelectorAll(".client"))[0]
-            document.querySelector(objectId).replaceChildren(...existant, ajout)
-            document.querySelector(objectId).scrollTo(0, 0)
+            ajout = Array.from(document.querySelector(objectId).querySelectorAll(".client")).slice(0, 1)
+            document.querySelector(objectId).replaceChildren(...existant, ...ajout)
+            document.querySelector(objectId).scrollTo(document.querySelector(objectId).children[0].offsetWidth, 0)
         }
-        // else if (document.querySelector(objectId).scrollLeft > (document.querySelector(objectId).children[0].offsetWidth + 32)) {
-        //     existant = Array.from(document.querySelector(objectId).querySelectorAll(".client")).slice(1)
-        //     ajout = Array.from(document.querySelector(objectId).querySelectorAll(".client"))[0]
-        //     document.querySelector(objectId).replaceChildren(...existant, ajout)
-        //     document.querySelector(objectId).scrollTo(0, 0)
-        // }
-        // si quelqu'un scroll vers la gauche, à faire
+        if (document.querySelector(objectId).scrollLeft < document.querySelector(objectId).children[0].offsetWidth) {
+            existant = Array.from(document.querySelector(objectId).querySelectorAll(".client")).slice(0, -1)
+            ajout = Array.from(document.querySelector(objectId).querySelectorAll(".client")).slice(-1)
+            document.querySelector(objectId).replaceChildren(...ajout, ...existant)
+            document.querySelector(objectId).scrollTo((document.querySelector(objectId).children[0].offsetWidth + 16) * 2, 0)
+        }
         document.querySelector(objectId).scrollBy(speed, 0)
         infiniteScroll(objectId, speed, wait)
     }, wait)
