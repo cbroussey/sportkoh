@@ -54,6 +54,21 @@ async function infiniteScroll(objectId, speed, wait) {
     }, wait)
 }
 
+function openNav() {
+    document.querySelector("body").style = "overflow: hidden"
+    document.querySelector("#sombre").style = "display: block; opacity: .60;"
+    document.querySelector("#sidenav").style = "left: 0"
+
+}
+function closeNav() {
+    document.querySelector("#sidenav").style = `left: ${-document.querySelector("#sidenav").offsetWidth}`
+    document.querySelector("#sombre").style = "display: block"
+    setTimeout(() => {
+        document.querySelector("#sombre").style = ""
+    }, 500)
+    document.querySelector("body").style = "overflow: visible"
+}
+
 window.onload = (() => {
     // document.querySelector("header").style = "border-radius: 0"
     // document.querySelector("header+aside").style = "border-radius: 0 0 1em 1em" //problème : impossible de remettre quand on retire les asides, donc trouver une solution du style media query mais en js
@@ -63,3 +78,9 @@ window.onload = (() => {
     infiniteScroll("#avis", 1, 50)
 })
 
+
+
+/* Set the width of the side navigation to 250px */
+
+
+/* Set the width of the side navigation to 0 */

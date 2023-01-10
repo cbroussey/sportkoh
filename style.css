@@ -129,16 +129,8 @@ aside > p, main + div > p {
 
 aside {
     border-radius: 1em;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
-}
-
-header + aside {
-    border-radius: 0 0 1em 1em;
-}
-
-a:hover {
-    color: #1278D6;
-    text-decoration: none;
 }
 
 aside + main > section > article > h1 {
@@ -270,6 +262,7 @@ article > div > button {
 }
 
 footer {
+    text-align: center;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
@@ -447,6 +440,56 @@ ul {
     left: 85%;
 }
 
+#sombre {
+    display: none;
+	position: fixed;
+	top: -2em;
+    z-index: 99;
+	left: 0px;
+	background: black;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Sidenav menu */
+#sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    z-index: 100;
+    top: -2em;
+    left: -65%;
+    background-color: #9BC635;
+    padding-top: 1em;
+    transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+#sidenav a {
+    color: #00373E;
+    font-family: "patua_one";
+    padding-left: 15%;
+    transition: 0.3s;
+    margin: 0;
+}
+
+#sidenav ul {
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    color: #1278D6;
+    text-decoration: none;
+}
 
 @media screen and (max-width: 800px) {
     #hamburger { display: flex; }

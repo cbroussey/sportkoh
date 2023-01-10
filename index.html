@@ -11,9 +11,21 @@
         <script src="index.js"></script>
     </head>
     <body>
+        <div id="sidenav">
+            <a id="closeBtn" href="#" onclick="closeNav()"><img src="images/croix.svg" width="45px" height="50px"></a>
+            <ul>
+                <li><a href="sejours.html"><h1>Séjours</h1></a></li>
+                <li><a href="activites.html"><h1>Activités</h1></a></li>
+                <li><a href="hebergement.html"><h1>Hébergements</h1></a></li>
+                <li><a href="contact.html"><h1>Contact</h1></a></li>
+            </ul>
+        </div>
+        <div id="sombre"></div>
         <header class="vert">
             <div id="hamburger">
-                <img src="images/bars-solid.svg" title="icone menu hamburger" alt="3 tirets noirs" width="50" height="50">
+                <a href="#" id="openBtn" onclick="openNav()">
+                    <img src="images/bars-solid.svg" title="icone menu hamburger" alt="3 tirets noirs" width="50" height="50">
+                </a>
             </div>
             <div id="sportkho">
                 <img src="images/logo.png" title="le logo de l'association" alt="logo bleu vert" width="70" height="70">
@@ -60,7 +72,7 @@
         <main>
             <section>
                 <article id="promotions">
-                    <h1>Promotions :</h1>
+                    <h1>Promotions</h1>
                     <div>
                         <div class="fade"></div>
                         <button class="Gauche" onclick="scrollLR('#promotions', -1)">&lt;</button>
@@ -82,7 +94,7 @@
                     </div>
                 </article>
                 <article id="populaires">
-                    <h1>Populaires :</h1>
+                    <h1>Populaires</h1>
                     <div>
                         <div class="fade"></div>
                         <button class="Gauche" onclick="scrollLR('#populaires', -1)">&lt;</button>
@@ -104,7 +116,7 @@
                     </div>
                 </article>
                 <article id="nouveautes">
-                    <h1>Nouveautés :</h1>
+                    <h1>Nouveautés</h1>
                     <div>
                         <div class="fade"></div>
                         <button class="Gauche" onclick="scrollLR('#nouveautes', -1)">&lt;</button>
@@ -182,9 +194,9 @@
             </div>
             <div class="fade fadeRight"></div>
         </div>
-        <aside class="emeraude">
+        <!-- <aside class="emeraude">
             <p>Lorem ipsum dolor sit omet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ujlomco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiot nulla pariotur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </aside>
+        </aside> -->
         <footer class="texte">
             <a href="#top">
                 <img src="images/up.svg" title="retour en haut" alt="fleche dans un rond" width="50" height="50">
