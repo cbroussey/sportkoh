@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
     <head>
         <meta charset="utf-8" />
-        <title>Hebergement</title>
         <meta name="description" content="page de présentation des peintures" />
         <meta name="keywords" content="Magrite peintures tableaux Louvre" />
+        <title>Sport KHO - Accueil</title>
+        <link rel="icon" type="image/png" href="images/icon.png" />
         <link href="style.css" rel="stylesheet">
-        <link href="hebergement.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <script src="index.js"></script>
     </head>
     <body>
-        <header>
+        <div id="sidenav">
+            <a id="closeBtn" href="#" onclick="closeNav()"><img src="images/croix.svg" width="45px" height="50px"></a>
+            <ul>
+                <li><a href="sejours.html"><h1>Séjours</h1></a></li>
+                <li><a href="activites.html"><h1>Activités</h1></a></li>
+                <li><a href="hebergement.html"><h1>Hébergements</h1></a></li>
+                <li><a href="contact.html"><h1>Contact</h1></a></li>
+            </ul>
+        </div>
+        <div id="sombre"></div>
+        <header class="vert">
             <div id="hamburger">
-                <img src="images/bars-solid.svg" title="icone menu hamburger" alt="3 tirets noirs" width="50" height="50">
+                <a href="#" id="openBtn" onclick="openNav()">
+                    <img src="images/bars-solid.svg" title="icone menu hamburger" alt="3 tirets noirs" width="50" height="50">
+                </a>
             </div>
             <div id="sportkho">
                 <img src="images/logo.png" title="le logo de l'association" alt="logo bleu vert" width="70" height="70">
@@ -25,25 +39,25 @@
                     <li>
                         <figure>
                             <img src="images/vacances.png" title="icone séjours" alt="logo parasol" width="100" height="100">
-                            <figcaption><h2>Séjours</h2></figcaption>
+                            <figcaption><a href="sejours.html"><h2>Séjours</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/activités.png" title="icone activités" alt="logo sports" width="100" height="100">
-                            <figcaption><h2>Activités</h2></figcaption>
+                            <figcaption><a href="activites.html"><h2>Activités</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/hebergement.png" title="icone séjours" alt="sports" width="100" height="100">
-                            <figcaption><h2>Hébergements</h2></figcaption>
+                            <figcaption><a href="hebergement.html"><h2>Hébergements</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/contact.png" title="icone contact" alt="lune et nuage" width="100" height="100">
-                            <figcaption><h2>Contact</h2></figcaption>
+                            <figcaption><a href="contact.html"><h2>Contact</h2></a></figcaption>
                         </figure>
                     </li>
                 </ul>
@@ -52,29 +66,159 @@
                 <img  src="images/bag-shopping-solid.svg" title="icone panier client" alt="panier à anse" width="50" height="50">
             </div>
         </header>
+        <aside class="noir">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </aside>
         <main>
-            <h1>ANANAS</h1>
+            <section>
+                <article id="promotions">
+                    <h1>Promotions</h1>
+                    <div>
+                        <div class="fade"></div>
+                        <button class="Gauche" onclick="scrollLR('#promotions', -1)">&lt;</button>
+                        <div class="scrollpane">
+                            <div></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div></div>
+                        </div>
+                        <div class="fade fadeRight"></div>
+                        <button class="Droite" onclick="scrollLR('#promotions', 1)">&gt;</button>
+                    </div>
+                </article>
+                <article id="populaires">
+                    <h1>Populaires</h1>
+                    <div>
+                        <div class="fade"></div>
+                        <button class="Gauche" onclick="scrollLR('#populaires', -1)">&lt;</button>
+                        <div class="scrollpane">
+                            <div></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div></div>
+                        </div>
+                        <div class="fade fadeRight"></div>
+                        <button class="Droite" onclick="scrollLR('#populaires', 1)">&gt;</button>
+                    </div>
+                </article>
+                <article id="nouveautes">
+                    <h1>Nouveautés</h1>
+                    <div>
+                        <div class="fade"></div>
+                        <button class="Gauche" onclick="scrollLR('#nouveautes', -1)">&lt;</button>
+                        <div class="scrollpane">
+                            <div></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div></div>
+                        </div>
+                        <div class="fade fadeRight"></div>
+                        <button class="Droite" onclick="scrollLR('#nouveautes', 1)">&gt;</button>
+                    </div>
+                </article>
+            </section>
         </main>
-        <footer>
-            <img href="#top" src="images/up.svg" title="retour en haut" alt="fleche dans un rond" width="50" height="50">
+        <div class="gris" style="position: relative;">
+            <div class="fade"></div>
+            <div id="avis" class="scrollpane avis">
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+                <figure class="client">
+                    <img src="images/photo-client.png">
+                    <figcaption>
+                        <h2>Prénom</h2>
+                        <p>“Avis positif qui a été sélectionné par l'entreprise afin d'attirer les clients et de les faire dépenser de la thune”</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="fade fadeRight"></div>
+        </div>
+        <!-- <aside class="emeraude">
+            <p>Lorem ipsum dolor sit omet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ujlomco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiot nulla pariotur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </aside> -->
+        <footer class="texte">
+            <a href="#top">
+                <img src="images/up.svg" title="retour en haut" alt="fleche dans un rond" width="50" height="50">
+            </a>
             <div>
                 <ul>
                     <li>
                         <figure>
                             <img src="images/contact.png" title="icone contact" alt="téléphone" width="100" height="100">
-                            <figcaption><h2>Contact</h2></figcaption>
+                            <figcaption><a href="contact.html"><h2>Contact</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/legal.png" title="icone mentions légales" alt="marteau de juge" width="100" height="100">
-                            <figcaption><h2>Mentions légales</h2></figcaption>
+                            <figcaption><a><h2>Mentions légales</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/user-solid.png" title="icone contact" alt="truc" width="100" height="100">
-                            <figcaption><h2>À propos de nous</h2></figcaption>
+                            <figcaption><a><h2>À propos de nous</h2></a></figcaption>
                         </figure>
                     </li>
                 </ul>
