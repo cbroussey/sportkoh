@@ -1,93 +1,106 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>Hebergement</title>
         <meta name="description" content="page de présentation des peintures" />
         <meta name="keywords" content="Magrite peintures tableaux Louvre" />
         <link href="style.css" rel="stylesheet">
-        <link href="hebergement.css" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
-    <body>
-        <header>
+    <body class="hebergement">
+        <div id="sidenav">
+            <a id="closeBtn" href="#" onclick="closeNav()"><img src="images/croix.svg" width="45px" height="50px"></a>
+            <ul>
+                <li><a href="sejours.html"><h1>Séjours</h1></a></li>
+                <li><a href="activites.html"><h1>Activités</h1></a></li>
+                <li><a href="hebergement.html"><h1>Hébergements</h1></a></li>
+                <li><a href="#"><h1>Contact</h1></a></li>
+            </ul>
+        </div>
+        <div id="sombre"></div>
+        <header class="vert">
             <div id="hamburger">
-                <img src="images/bars-solid.svg" title="icone menu hamburger" alt="3 tirets noirs" width="50" height="50">
+                <a href="#" id="openBtn" onclick="openNav()">
+                    <img src="images/bars-solid.svg" title="icone menu hamburger" alt="3 tirets noirs" width="50" height="50">
+                </a>
             </div>
-            <div id="sportkho">
+            <a href="index.html" id="sportkho">
                 <img src="images/logo.png" title="le logo de l'association" alt="logo bleu vert" width="70" height="70">
                 <section>
                     <h1>Sport KHO</h1>
                     <h3>Le sport c'est fort</h3>
                 </section>
-            </div>
+            </a>
             <div id="menu">
                 <ul>
                     <li>
                         <figure>
                             <img src="images/vacances.png" title="icone séjours" alt="logo parasol" width="100" height="100">
-                            <figcaption><h2>Séjours</h2></figcaption>
+                            <figcaption><a href="sejours.html"><h2>Séjours</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/activités.png" title="icone activités" alt="logo sports" width="100" height="100">
-                            <figcaption><h2>Activités</h2></figcaption>
+                            <figcaption><a href="#"><h2>Activités</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/hebergement.png" title="icone séjours" alt="sports" width="100" height="100">
-                            <figcaption><h2>Hébergements</h2></figcaption>
+                            <figcaption><a href="hebergement.html"><h2>Hébergements</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/contact.png" title="icone contact" alt="lune et nuage" width="100" height="100">
-                            <figcaption><h2>Contact</h2></figcaption>
+                            <figcaption><a href="#"><h2>Contact</h2></a></figcaption>
                         </figure>
                     </li>
                 </ul>
             </div>
             <div id="panier">
-                <img  src="images/bag-shopping-solid.svg" title="icone panier client" alt="panier à anse" width="50" height="50">
+                <a href="#"><img src="images/bag-shopping-solid.svg" title="icone panier client" alt="panier à anse" width="50" height="50"></a>
             </div>
         </header>
+
         <main id="haut de page">
             <section>
                 <article>
                     <h1>Village de la plage d'argent</h1>
-                    <div>
-                        <img src="images/plage-ajaccio.jpg" title="image plage idyllique" alt="photo de plage corse" width="320" height="250"></src>
-                        <p>Le village sportif se situe dans le golfe d’Ajaccio, à 300 m de la plage d’Argent renommée pour ses eaux limpides. Bordée par le maquis, vous profiterez d’un environnement naturel où la végétation méditerranéenne se déploie à perte de vue.</p>
+                    <div class="test">
+                        <figure><img src="images/plage-ajaccio.jpg" title="image plage idyllique" alt="photo de plage corse" width="320" height="250"></src></figure>
+                        <p>Le village sportif se situe dans le golfe d’Ajaccio, à 300 m de la plage d’Argent renommée pour ses eaux limpides. Bordée par le maquis, vous profiterez d’un environnement naturel où la végétation méditerranéenne se déploie à perte de vue. Cet endroit est idyllique, vous avez la mer qui vient vous lécher les pieds et le vent qui vous caresse le visage lorsque vous descendrez à la plage. Profitez de cet instant unique, là les pieds dans l'eau, regardez le soleil ce lever à l'horizon dans son manteaux de nuage. Après votre séjour les criques corses n'auront plus de secrets pour vous, avis aux amateurs d'escalade! </p>
                     </div>
                 </article>
                 <article>
                     <h2>Infrastructures du lieu</h2>
-                    <div>
-                        <figure><img src="images/centre_nautique.jpg" title="image voile bonifacio" alt="photo planche à voile" width="200" height="260"></src><figcaption>Centre nautique</figcaption></figure>
-                        <figure><img src="images/piscine.jpg" title="image piscine extérieure" alt="piscine devant une mer" width="200" height="260"></src><figcaption>Piscine extérieure</figcaption></figure>
-                        <figure><img src="images/salle.jpg" title="image salle de sport" alt="machine de musculation" width="200" height="260"></src><figcaption>Salle de sport</figcaption></figure>
+                    <div class="wrap">
+                        <figure><img src="images/surf-6668228_960_720.jpg" title="image voile bonifacio" alt="photo planche à voile" height="200"></src><figcaption>Centre nautique</figcaption></figure>
+                        <figure><img src="images/piscine.jpg" title="image piscine extérieure" alt="piscine devant une mer" height="200"></src><figcaption>Piscine extérieure</figcaption></figure>
+                        <figure><img src="images/salle.jpg" title="image salle de sport" alt="machine de musculation" height="200"></src><figcaption>Salle de sport</figcaption></figure>
                     </div>
                 </article>
                 <article>
                     <h2>Hébergement</h2>
-                    <div>
+                    <div class="wrap">
                         <div>
                             <p> Nos bungalows 4 personnes </p>
-                            <figure><img src="images/benger.jpg" title="image des bungalows" alt="bungalow et arbres" width="250" height="208"></src><figcaption>A quatre on est bien</figcaption></figure>
+                            <figure><img src="images/bungalow.jpg" title="image des bungalows" alt="bungalow et arbres" height="200"></src><figcaption>A quatre on est bien</figcaption></figure>
                         </div>
-                        <p>OU</p>
+                        <p class="none">OU</p>
                         <div>
                             <p>Supplément bungalows à deux</p>
-                            <figure><img src="images/couple_bis.jpg" title="image d'un couple" alt="couple et plage" width="250" height="208"></src><figcaption> à deux on est mieux !</figcaption></figure>
+                            <figure><img src="images/couple.jpg" title="image d'un couple" alt="couple et plage" height="208"></src><figcaption> à deux on est mieux !</figcaption></figure>
                         </div>
                     </div>
-                    <div>
+                    <div class="wrap">
                         <div>
                             <p>Self-service</p>
-                            <figure><img src="images/self.jpg" title="image self-service" alt="assiette et nourriture" width="100" height="300"></src></figure>
+                            <figure><img src="images/self.jpg" title="image self-service" alt="assiette et nourriture" height="300"></src></figure>
                         </div>
-                        <p>OU</p>
+                        <p class="none">OU</p>
                         <div>
                             <p>Nos paniers repas</p>
                             <figure><img src="images/panier_repas.jpg" title="panier repas" alt="panier et vivres" width="100" height="300"></src></figure>
@@ -97,12 +110,12 @@
                 <article>
                     <h2>Localisation</h2>
                     <p>La plage aux mille reflets</p>
-                    <div>
-                        <img src="images/loc1.png" title="plage corse" alt="plage blanche" width="300" height="300"></src>
-                        <img src="images/loc2.jpg" title="une plage corse" alt="plage blanche plus roches" width="300" height="300"></src>
+                    <div class="plage">
+                        <img src="images/plage1.jpg" title="une plage corse" alt="plage blanche plus roches" width="290" height="300"></src>
+                        <img src="images/plage2.jpg" title="un beau rivage"  alt="magnifique!" width="290" height="300"></src>
                     </div>
                    <p>Grande plage de la Méditerranée avec son sable blanc et ses eaux turquoises</p>
-                   <div>  
+                   <div class="none">  
                         <p>Pays : France</p>
                         <p>Dans la commune de Pietrosella dans le département «Corse du Sud</p>
                         <p>Nom de la plage: Anse de Verghia</p>
@@ -114,30 +127,33 @@
             </section>
             <br>
         </main>
-        <footer>
-            <img href="top" src="images/up.svg" title="retour en haut" alt="fleche dans un rond" width="50" height="50">
+        <footer class="texte">
+            <a href="#top">
+                <img src="images/up.svg" title="retour en haut" alt="fleche dans un rond" width="50" height="50">
+            </a>
             <div>
                 <ul>
                     <li>
                         <figure>
                             <img src="images/contact.png" title="icone contact" alt="téléphone" width="100" height="100">
-                            <figcaption><h2>Contact</h2></figcaption>
+                            <figcaption><a href="#"><h2>Contact</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/legal.png" title="icone mentions légales" alt="marteau de juge" width="100" height="100">
-                            <figcaption><h2>Mentions légales</h2></figcaption>
+                            <figcaption><a href="#"><h2>Mentions légales</h2></a></figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
                             <img src="images/user-solid.png" title="icone contact" alt="truc" width="100" height="100">
-                            <figcaption><h2>À propos de nous</h2></figcaption>
+                            <figcaption><a href="#"><h2>À propos de nous</h2></a></figcaption>
                         </figure>
                     </li>
                 </ul>
             </div>
         </footer>
+
     </body>
 </html>
