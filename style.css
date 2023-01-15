@@ -81,20 +81,20 @@
 @font-face {
     font-family: 'poppins';
     src: url('polices/poppins-extralightitalic-webfont.woff2') format('woff2'),
-         url('polices/poppins-extralightitalic-webfont.woff') format('woff');
+    url('polices/poppins-extralightitalic-webfont.woff') format('woff');
     font-weight: lighter;
     font-style: italic;
 
 }
 
-html {
-    background-color: white;
+html, body {
+    color: #00373E;
+    background-color:#d3f78f;
     scroll-behavior: smooth;
 }
 
 body {
-    color: #00373E;
-    background-color:#d3f78f;
+    margin: 0;
 }
 
 h1 {
@@ -126,7 +126,13 @@ a {
 
 
 
-aside > p, main + div > p {
+
+.accueil > *:not(header, footer) {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.accueil aside > p, .accueil main + div > p {
     margin: 0;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -134,13 +140,12 @@ aside > p, main + div > p {
     border-radius: 0 0 1em 1em;
 }
 
-aside {
+.accueil aside {
     border-radius: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0.5em 5%;
 }
 
-aside + main > section > article > h1 {
+.accueil aside + main > section > article > h1 {
     margin: 0;
     margin-top: 0.5em;
 }
@@ -156,11 +161,14 @@ header, footer {
 }
 
 header {
+    z-index: 90;
+    position: sticky;
+    top: 0;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
 }
 
-header > div {
+header > * {
     display: flex;
     max-width: 20em;
     min-width: 14.3em;
@@ -188,39 +196,39 @@ header > div {
     order: 1;
 }
 
-div > section > * {
+header section > * {
     margin: 0;
 }
 
-div > ul {
+header div > ul, footer div > ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
     flex-grow: 1;
 }
 
-ul > li {
+header ul > li, footer ul > li {
     display: flex;
     max-width: 100%;
 }
 
-li > figure {
+header li > figure {
     display: flex;
     max-width: 10em;
     flex-direction: column;
     align-items: center;
 }
 
-li > figure > img {
+header li > figure > img, footer li > figure > img {
     width: 2em;
     height: 2em;
 }
 
-figcaption > a > h2 {
+header figcaption > a > h2 {
     margin: 0;
 }
 
-li > *, footer > div > * {
+header li > *, footer > div > * {
     margin: auto;
 }
 
@@ -233,22 +241,17 @@ header > h2 {
     align-self: center;
 }
 
-aside, main {
+.accueil aside, .accueil main {
     padding-left: 5%;
     padding-right: 5%;
 }
 
-main > section > article > div {
+.accueil main > section > article > div {
     display: flex;
     position: relative;
 }
 
-body > div {
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-}
-
-article > div > button {
+.accueil article > div > button {
     color: #00373E;
     z-index: 50;
     opacity: 1;
@@ -290,6 +293,7 @@ footer > div > ul > li > figure {
     flex-direction: row;
     max-width: 20em;
     align-items: center;
+    margin: auto;
     margin-right: 0.5em;
 }
 
@@ -297,7 +301,7 @@ footer > div > ul > li > figure > img {
     margin-right: 0.5em;
 }
 
-ul {
+header ul, footer ul {
     padding: 0;
 }
 
@@ -419,7 +423,22 @@ ul {
         #888888 80%,
         #eee 100%
     );
+    background: -webkit-linear-gradient(
+        to bottom, 
+        #00373E 0%,
+        #00373E 60%,
+        #888888 80%,
+        #eee 100%
+    );
+    background: -o-linear-gradient(
+        to bottom, 
+        #00373E 0%,
+        #00373E 60%,
+        #888888 80%,
+        #eee 100%
+    );
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -539,9 +558,16 @@ ul {
 #sidenav a {
     color: #00373E;
     font-family: "patua_one";
-    padding-left: 15%;
     transition: 0.3s;
     margin: 0;
+}
+
+#sidenav img {
+    padding-left: 15%;
+}
+
+#sidenav h1 {
+    padding-left: 15%;
 }
 
 #sidenav a:hover {
@@ -556,6 +582,10 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.detailSejour #sidenav, .detailSejour #sombre, .hebergement #sidenav, .hebergement #sombre {
+    top: 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -595,7 +625,7 @@ ul {
     .card > h2 {
         font-size: 1em;
     }
-    article > div > button {
+    .accueil article > div > button {
         width: 3.5em;
     }
     .client {
@@ -610,10 +640,10 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
-    li > figure > img {
+    footer li > figure > img {
         display: none;
     }
-    aside {
+    .accueil aside {
         display: none;
     }
     header {
@@ -627,13 +657,977 @@ ul {
         width: 40px;
         height: 40px;
     }
-    div > section > h1 {
+    header section > h1 {
         font-size: 1.2em;
     }
-    div > section > h3 {
+    header section > h3 {
         font-size: 0.8em;
     }
     #sportkho {
         min-width: 8em;
+    }
+}
+
+
+
+
+
+
+
+
+.detailSejour > ul {
+    padding: 0;
+}
+
+.detailSejour li {
+    list-style-type: none;
+}
+
+.detailSejour main {
+    color: black;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+.detailSejour main>h3{
+    margin: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#detSejourSection1, #detSejourSection3, .detSejourSection, .detSejourResumFlex3{
+    margin:6em 10em 6em 10em;
+}
+
+
+.detailSejour section + h2, main>h2{
+    background-color: #00373e;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#FlexRow, #detSejourResumFlex1, #detSejourSection3,#detSejourResumFlex4, #detSejourFinFin,#detSejourSpace_beet{
+    display: flex;
+    flex-direction: row;
+}
+
+#detSejourResumFlex1{
+    align-items: center;
+}
+
+#detSejourSpace_beet{
+    justify-content: space-between;
+    margin: 0px 0px 3em 0px;
+
+}
+
+#detSejourResumFlex2, .detSejourResumFlex3, #detSejourTroisAct, #detSejourliste2, #detSejourResumFlex6, .detSejourTr2{
+    display: flex;
+    flex-direction: column;
+}
+
+#detSejourResumFlex2, #detSejourResumFlex6{
+    justify-content: space-between;
+}
+
+.detSejourResumFlex3{
+    align-items: center;
+}
+
+#detSejourResumFlex4{
+    justify-content: space-between;
+
+}
+
+.detSejourimageBorder1,#detSejourimageBorder2, #detSejourActSec1, #detSejourFinFin>img, #detSejourimageBorderPlongee, #detSejourImgCover, .DetSejourDisparait{
+    border-radius: 10px;
+}
+
+.DetSejourDisparait{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#detSejourTitreListe{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-size: 50px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left: 0.5em;
+}
+
+.detSejourListe > hr{
+    border: 4px solid #00373E;
+    border-radius: 30px;
+    margin: 1em 0em;
+    padding-right: 0px;
+}
+
+.detSejourListe > hr + p{
+    font-size: 20px;
+}
+
+#imgLogo{
+    padding-right: 0.5em;
+}
+
+.detSejourListe, #cadre{
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#cadre{
+    box-sizing: border-box;
+    border: 10px solid #00373E;
+    filter: drop-shadow(-5px 5px 4px rgba(0, 55, 62, 0.25));
+    border-radius: 30px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.05em;
+    padding: 1em;
+}
+
+#detSejourliste2{
+    font-size: 27px;
+    justify-content: space-between;
+}
+
+#DetSejourDisparait2{
+    display:none
+}
+
+#detSejourTroisAct{
+    border: 5px solid #00373E;
+    border-radius: 20px;   
+    font-weight: 400;
+    text-align: center;
+    margin: 0px 4%;
+    justify-content:space-around
+}
+
+#detSejourTroisAct > p{
+    font-size: 40px;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
+}
+
+#detSejourSection3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailSejour table{
+    margin: 2em;
+    border-collapse : collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.detailSejour th,td{
+    border: 7px solid #00373E;
+    padding: 1em 2em; 
+}
+
+.detSejourBordertableau{
+    border-radius: 1em;
+}
+
+#detSejourTr1{
+    font-weight: 400px;
+    font-size: 35px;
+    line-height: 150%;
+}
+
+.detSejourTr3{
+    font-size: 27px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.detSejourTr2{
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    padding: 0;
+}
+
+.detSejourTr2 > li {
+    margin: 0.4em 0em;
+}
+
+.backgroundBleu1{
+    background-color: #00373E;
+    color: #ffffff;
+    font-family: 'Patua One';
+    font-style: normal;
+    font-size: 35px;
+    line-height: 150%;
+}
+
+#detSejourFin{
+    font-size: 28px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+#detSejourFin>li{
+    margin: 0.75em 0em;
+}
+
+#detSejourFinFin{
+    justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #detSejourSpace_beet {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #detSejourResumFlex2 > .detSejourListe > p {
+        font-size: 31px;
+        text-align: center;
+    }
+
+    #cadre{
+        font-weight: 30px;
+        line-height:1.65em ;
+    }
+
+    #detSejourSection1, .detSejourSection, .detSejourSection3, .detSejourResumFlex3{
+        margin:4em 1em;
+    }
+
+    #detSejourimageBorderPlongee{
+        order: 2;
+    }
+
+    #detSejourResumFlex1{
+        margin-bottom: 1em;
+        justify-content: center;
+    }
+
+    #detSejourResumFlex4{
+        justify-content: center;
+    }
+
+    #detSejourliste2{
+        align-items: center;
+    }
+
+    #detSejourliste2 > li{
+        font-size:31px;
+        padding: 0.4em 0em;
+    }
+
+    .DetSejourDisparait{
+        display: none;
+    }
+
+    #detSejourimageBorder2{
+        margin: 0px;
+    }
+
+    #detSejourResumFlex2{
+        margin-bottom: 4em;
+    }
+
+    #detSejourSpace_beet>img{
+        width: 100%;
+    }
+
+    #detSejourSection3{
+        flex-direction: column;
+    }
+
+    #detSejourPetiteMargeGauche{
+        margin-left: 10%;
+    }
+
+    #detSejourTroisAct{
+        order: -1;
+        flex-direction: row;
+        justify-content:space-around;
+        margin: 0px 0px 3em 0px;
+        padding-right: 5%;
+    }
+
+    #detSejourTroisAct > p{
+        font-size: 30px;
+    }
+
+    #detSejourSection3 > aside > img{
+        width: 25%;
+        height: 25%;
+    }
+
+    #DetSejourDisparait2{
+        display: block;
+        border-radius: 10px;
+        width:10%;
+        height:10%;
+    }
+
+    #detSejourImgCover{
+        object-fit: cover; 
+    }
+
+    #detSejourResumFlex6{
+        flex-direction: row;
+        align-items:center;
+    }
+
+    .detSejourResumFlex3{
+        margin: 0px 1.5em;
+    }
+
+    .detSejourTr2{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        font-size: 27px;
+    }
+
+    .detSejourTr2 > li, .detSejourTr2 > td > ul > li {
+        margin: 1em 0em;
+    }
+
+    .detailSejour th,td{
+    border: 7px solid #00373E;
+    padding: 1em 0.5em;
+    }
+
+    .detSejourTr1 > th{
+        font-size: 32px;
+    }
+
+    .backgroundBleu1{
+        font-size: 32px;
+        line-height: 100%;
+    }
+
+    #detSejourFin{
+        font-size: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .detailSejour main>h2{
+        font-size: 20px;
+        padding: 1em 0.5em;
+    }
+
+    #detSejourTitreListe{
+        font-size: 25px;
+    }
+
+    #detSejourResumFlex1 > img {
+        height: 10%;
+        width: 10%;
+    }
+
+    #detSejourResumFlex2 >.detSejourListe > p {
+        font-size:21px;
+    }
+
+    #detSejourResumFlex2 > .detSejourListe > img {
+        height: 50%;
+        width: 50%;
+    }
+
+    #cadre{
+        font-size: 15px;
+        border: 5px solid #00373E;
+    }
+    
+
+    #detSejourliste2 > li{
+        font-size: 20px;
+        justify-content:flex-start;
+    }
+
+    #detSejourSection1, .detSejourSection, .detSejourSection3, .detSejourResumFlex3{
+        margin:2em 1em;
+    }
+
+    #detSejourTroisAct > p, #detSejourTr1 > th{
+        font-size: 15px;
+    }
+    
+    .detSejourTr3 > td, .detSejourTr2 > li{
+        font-size: 15px;
+    }
+
+    .backgroundBleu1{
+        font-size: 17px;
+    }
+
+    #detSejourFin > li{
+        font-size: 15px;
+    }
+
+    #detSejourTroisAct{
+        padding: 0px;
+        margin: 0px 0px 1em 0px;
+        border: 5px solid #00373E;
+    }
+
+    #detSejourSection3{
+        margin: 0px;
+    }
+
+}
+
+
+.catalogue aside, main {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.catalogue main > section > article > div {
+    display: flex;
+    position: relative;
+}
+
+.catalogue > div {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.catalogue div > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.catalogue article > div > button {
+    color: #00373E;
+    opacity: 1;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+    top: 40%;
+    height: 20%;
+    width: 5em;
+    transition: opacity 0.2s;
+}
+
+.catalogue ul {
+    padding: 0;
+}
+
+.BoxSejour1 {
+    background-color: #E6F2D6;
+    display:flex;
+    margin-left:20px ;
+    margin-right: 20px;
+    border-radius: 20px;
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(0,55,62,0.5)
+}
+
+.BoxSejour2 {
+    background-color: #E6F2D6;
+    display:flex;
+    margin-left:20px ;
+    margin-right: 20px;
+    border-radius: 20px;
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(0,55,62,0.5)
+}
+
+.BoxSejour1 img {
+    margin: 0;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.BoxSejour2 img {
+    margin: 0;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Box {
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    overflow: auto;
+}
+
+.catalogue p > a {
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 75px;
+    padding-right: 75px;
+    border-radius: 90px;
+}
+
+.catalogue p {
+    color: #00373E;
+}
+
+.catalogue main h1  {
+    color: #00373E;
+}
+
+.catalogue ol {
+    color: #00373E;
+}
+
+@media screen and (max-width : 360px) {
+    .BoxSejour1 {
+        background-color: #E6F2D6;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .BoxSejour2 {
+        background-color: #E6F2D6;
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .BoxSejour1 img {
+        margin: 0;
+        width: auto;
+        height: 50%;
+        object-fit: cover;
+        border-top-left-radius:20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .BoxSejour2 img {
+        margin: 0;
+        width: auto;
+        height: 50%;
+        object-fit: cover;
+        border-top-left-radius:20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .Box{
+        flex-direction: row;
+        text-align: center;
+        width: 50%;
+        width: auto;
+    }
+
+    .Box > p > u{
+        display : none;
+    }
+
+    #Liste {
+        display : none;
+    }
+
+    .catalogue p > a {
+        border: 2px solid black;
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 90px;
+    }
+}
+
+
+
+
+
+
+
+
+.hebergement main>section>article>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.hebergement main>section>article>h1+div>figure{
+    display: block;
+    float: left;
+}
+
+/* le titre h2 */
+
+.hebergement main>section>article>h2{
+    background-color: #00373e;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+.hebergement main>section>article>div>figure>img{
+    border-radius: 15px;
+}
+.hebergement main>section>article>div>figure+p{
+    font-size: 15px;
+    height: 10px;
+    clear: left;
+}
+/* image plage d'argent */
+.hebergement main>section>article>div>img{
+    flex-basis: 20%;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.hebergement main>section>article>h1{
+    background-color: #00373e;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 0em;
+
+}
+
+.hebergement main>section>article+article>h2+div{
+    display:flex;
+    justify-content: center;
+}
+
+.hebergement main>section>article+article+article>h2+div{
+    display:inline-flex;
+    justify-content: center;
+}
+/* mettre le text au dessus des figures 1 et2 */
+.hebergement main>section>article+article+article>h2+div>div{
+    display:flex;
+    flex-direction: column;
+}
+/* idem 3 et 4 */
+.hebergement main>section>article+article+article>h2+div+div>div{
+    display:flex;
+    flex-direction: column;
+}
+
+.hebergement main>section>article+article+article>h2+div>div>p{
+    background-color: #00373e;
+    color: white;
+    display:flex;
+    align-self: center;
+    margin-bottom: 0em;
+}
+
+.hebergement main>section>article+article+article>h2+div+div>div>p{
+    background-color: #00373e;
+    color: white;
+    display:flex;
+    align-self: center;
+    margin-bottom: 0em;
+}
+
+/* centrer le premier div */
+.hebergement main>section>article+article+article>h2+div{
+    display:flex;
+    justify-content: center;
+}
+/* centrer le deuxième div */
+.hebergement main>section>article+article+article>h2+div+div{
+    display:flex;
+    justify-content: center;
+}
+/* gestion du premier OU */
+.hebergement main>section>article+article+article>h2+div>div+p{
+    display:flex;
+    align-self: center;
+}
+
+/* gestion du deuxième OU */
+.hebergement main>section>article+article+article>h2+div+div>div+p{
+    display:flex;
+    align-self: center;
+}
+/* enlever la marge externe de l'img 1 et la redimensionner pour qu'elle est la largeur du texte */
+.hebergement main>section>article+article+article>h2+div>div>p+figure>img{
+    padding-top: 0em;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+}
+
+.hebergement main > section > article + article> h2 + div{
+    display: flex;
+}
+/* article 2 */
+.hebergement main > section > article + article> h2 + div> figure > img{
+    min-width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 150%;
+    border-radius: 10px;
+}
+.hebergement main > section > article + article + article > h2 + div > div {
+    display: flex;
+}
+
+.hebergement main > section > article + article + article > h2 + div +div > div {
+    display: flex;
+}
+/* les deux premières images de l'article 3 */
+.hebergement main > section > article + article + article > h2 + div > div > p + figure> img{
+    min-width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* les deux dernières images de l'article 3 */
+.hebergement main > section > article + article + article > h2 + div + div > div > p + figure> img{
+    min-width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hebergement main > section > article + article + article > h2 + div + div > div{
+    display: flex;
+}
+
+.hebergement main > section > article + article + article > h2 + div +div > div > p + figure> img{
+    min-width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 100%;
+}
+
+/* enlever la marge externe de l'img 3 et 4 et les redimensionner pour qu'elle est la largeur du texte */
+.hebergement main>section>article+article+article>h2+div+div>div>p+figure>img{
+    width: 280px;
+    height: 250px;
+    padding-top: 0em;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+/* enlever la marge externe de la figure des 2 premières images article 3 */
+.hebergement main>section>article+article+article>h2+div>div>p+figure{
+    margin-top: 0em;
+}
+
+/* enlever la marge externe de la figure des 2 derniers images article 3 */
+.hebergement main>section>article+article+article>h2+div+div>div>p+figure{
+    margin-top: 0em;
+}
+
+/* centrer les légendes */
+.hebergement figcaption{
+    display: block;
+    text-align: center;
+}
+
+/* arranger la largeur du conteneur du text self-service */
+.hebergement main>section>article+article+article>h2+div+div>div>p{
+    padding-left: 6.95em ;
+    padding-right: 6.95em ;
+    font-family: titre;
+}
+
+/* arranger la largeur du conteneur du text panier repas */
+.hebergement main>section>article+article+article>h2+div+div>div+p+div>p{
+    padding-left: 5.8em ;
+    padding-right: 5.8em ;
+    font-family: titre;
+}
+
+/* arranger la largeur du conteneur du text couple*/
+.hebergement main>section>article+article+article>h2+div>div+p+div>p{
+    padding-left: 4.26em ;
+    padding-right: 4.26em ;
+    font-family: titre;
+}
+
+/* arranger la largeur du conteneur du text bungaluws */
+.hebergement main>section>article+article+article>h2+div>div>p{
+    padding-left: 3.3em ;
+    padding-right: 3.3em ;
+    font-family: titre;
+}
+
+/* remettre en place l'img décalé par le padding du texte */
+.hebergement main>section>article+article+article>h2+div+div>div+p{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.hebergement main>section>article+article+article+article>p{
+    text-align: center;
+}
+
+.hebergement main>section>article+article+article+article>h2+p+div{
+    display: flex;
+    justify-content: center;
+}
+
+.hebergement main>section>article+article+article+article>h2+p+div+p+div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #00373e;
+    color: white;
+    /*justify-content: center;*/
+}
+
+.hebergement main>section>aside{
+    display: flex;
+    /*background-color: aquamarine;*/
+    justify-content: center;
+}
+
+.img_hebergement>figure>img{
+    border-radius:20px;
+}
+
+@media screen and (max-width: 1200px)
+{
+
+    .hebergement .test{
+        display: flex;
+        flex-direction: column;
+        height: 26em;
+    }
+    .hebergement .test>figure{
+        display: flex;
+        width:80%;
+        justify-content: center;
+    }
+    .hebergement .test>figure>img{
+        min-width: 50%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        max-width: 150%;
+        object-fit: fill;
+    }
+}
+@media screen and (max-width: 858px)
+{
+
+    .hebergement .test{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        margin-bottom: 20em;
+    }
+    .hebergement .test>p{
+        font-size: 139%;
+    }
+    .hebergement .wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .hebergement .none{
+        display: none;
+    }
+    .hebergement .test>figure>img,.plage>img{
+        min-width: 60%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        max-width: 130%;
+        object-fit: fill;
+    }
+    .hebergement .plage{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .hebergement .test>figure{
+        display: flex;
+        width:80%;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 500px)
+{
+
+    .hebergement .test>p{
+        font-size: 125%;
+    }
+    .hebergement .plage{
+        flex-grow: 1;
+        flex-shrink: 1;
+        object-fit:cover;
+    }
+    .hebergement .test>figure>img,.plage>img{
+        min-width: 90%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 130%;
+        object-fit:fill;
+    }
+    .hebergement .wrap>figure>img{
+        padding-left:20px;
+        padding-right: 20px;
+        object-fit:fill;
+    }
+}
+@media screen and (max-width: 391px)
+{
+
+    .hebergement .test>p{
+        font-size: 106%;
+        margin-top: 0;
+    }
+    .hebergement .test>figure{
+        padding: 0;
+    }
+    .hebergement .test>figure>img{
+        min-width: 60%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 150%;
+        object-fit: scale-down;
+    }
+    .hebergement .plage>img{
+        min-width: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 130%;
+        object-fit:fill;
+    }
+    .hebergement .wrap>figure{
+        margin:auto;
+    }
+    .hebergement .wrap div >p{
+        padding-left: 49% ;
+        padding-right: 49% ;
+        font-family: titre;
+        margin-bottom: 15px;
+        text-align:start;
     }
 }
